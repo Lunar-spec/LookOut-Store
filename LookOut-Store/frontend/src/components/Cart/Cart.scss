@@ -1,0 +1,109 @@
+.cart{
+    cursor: default;
+    position: absolute;
+    right: 6px;
+    width: 30%;
+    top: 65px;
+    z-index: 999;
+    background-color: #343434;
+    padding: 20px;
+    border-radius: 5px;
+    color: #000;
+    box-shadow: 0 0 7px -5px rgba(0, 0, 0, 0.5);
+
+    h1{
+        margin-bottom: 30px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 24px;
+    }
+
+    .item{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+        img{
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .details{
+            cursor: default;
+            h1{
+                font-size: 18px;
+                font-weight: 500;
+                text-decoration: underline;
+            }
+            p{
+                color: rgb(182, 182, 182);
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+            .price{
+                color: #2879fe;
+                font-weight: 500;
+                font-size: 18px;
+            }
+        }
+
+        .delete{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #EC7063;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+
+    .total{
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 20px;
+
+
+        .totalp{
+            color: #2ECC71;
+            font-weight: 500;
+        }
+    }
+
+    button{
+        width: 250px;
+        padding: 10px;
+        color: #fff;
+        background-color: #9B59B6;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        font-weight: 500;
+        transition: background 200ms ease-in-out;
+
+        &:hover{
+            background: #884EA0;
+        }
+    }
+
+    .reset{
+        color:#E74C3C;
+        font-size: 12px;
+        cursor: pointer;
+        float: right;
+        transition: transform 200ms ease-in-out;
+
+        &:hover{
+            transform: scale(1.4);
+        }
+    }
+}
+

@@ -1,0 +1,56 @@
+.payment {
+    background: #343434;
+    height: 100vh;
+    color: #fff;
+  
+    .payment__container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+        
+      .icon {
+        font-size: 15rem;
+        color: coral;
+      }
+      .payment__icon {
+        font-size: 15rem;
+        color: #76D7C4;
+      }
+  
+      .payment__title {
+        margin: 2rem 0;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+      }
+  
+      .payment__message {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .home {
+        padding: 10px;
+        text-decoration: none;
+        background-color: #F5B041;
+        font-size: 18px;
+        font-weight: 400;
+        cursor: pointer;
+        border: none;
+        border-radius: 2.5px;
+        color: white;
+        transition: all 200ms ease-in-out;
+
+        &:hover{
+          background-color: #F1C40F;
+        }
+      }
+    }
+  }
+  

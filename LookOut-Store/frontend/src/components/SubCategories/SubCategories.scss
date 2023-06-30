@@ -1,0 +1,101 @@
+.products {
+    padding: 30px 50px;
+    background: #232323;
+    display: flex;
+    color: #fff;
+    accent-color: #3BF7C9;
+
+    .left{
+        flex: 1;
+        position: sticky;
+        height: 100%;
+        top: 50px;
+
+        .filterItem{
+            margin-bottom: 30px;
+
+            h2{
+                font-weight: 400;
+                margin-bottom: 20px;
+            }
+
+            .check{
+                text-transform: capitalize;
+                transition: padding 200ms ease;
+
+                &:hover{
+                    padding: 10px;
+                }
+            }
+
+            .reset__filters{
+                margin-top: 20px;
+
+                button{
+                    border-radius: 4px;
+                    border: none;
+                    padding: 10px;
+                    width: 90%;
+                    font-weight: 600;
+                    font-size: 14px;
+                    cursor: pointer;
+                    transition: background 150ms ease-in-out;
+
+                    &:hover{
+                        background-color: #D7DBDD;
+                    }
+                }
+
+
+            }
+
+            .inputItem{
+                margin-bottom: 10px;
+                
+                label{
+                    margin-left: 10px;
+                }
+
+                .rangeSl {
+                    -webkit-appearance: none;
+                    width: 200px;
+                    height: 2px;
+                    background: lightgray;
+                    outline: none;
+                    opacity: 0.7;
+                    border-radius: 2px;
+                    -webkit-transition: .2s;
+                    transition: opacity .2s;
+                }
+                
+                .rangeSl:hover {
+                    opacity: 1;
+                }
+                
+                .rangeSl::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    border-radius: 2.5px;
+                    cursor: pointer;
+                    width: 0;
+                    height: 0; 
+                    border-top: 12px solid #8E44AD;
+                    border-bottom: 12px solid #8E44AD;
+                    border-right: 5px solid #8E44AD;
+                    border-left: 5px solid #8E44AD;
+                }
+            }
+        }
+    }
+    .right{
+        flex: 3;
+        
+        .catImg{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 50px;
+        }
+    }
+}
+

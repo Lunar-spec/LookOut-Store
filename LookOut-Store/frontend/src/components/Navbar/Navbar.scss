@@ -1,0 +1,97 @@
+.navbar {
+    height: 60px;
+    // background-color: #232323;
+    background: #232323;
+    color: #fff;
+    z-index: 999;
+    top: 0;
+    position: sticky;
+
+    .wrapper {
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .item {
+            display: flex;
+            font-size: 18px;
+            padding: 10px;
+            text-decoration: none;
+            background: transparent;
+            transition:all 200ms ease-in-out;
+        }
+
+        .item:hover {
+            padding-top: 5px;
+            color: aqua;
+            // background: linear-gradient(to right, #fe8dc6, #fed1c7);
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .center {
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin: 0px;
+            transition:all 200ms ease-in-out;
+        }
+
+        .center:hover {
+            transform: scale(1.05);
+            color: #D0D3D4;
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            .icons {
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+                align-items: center;
+                color: gray;
+                cursor: pointer;
+                padding-right: 5px;
+                transition: all 200ms ease-in-out;
+
+                .icons:hover {
+                    color: aqua;
+                }
+
+                .cartIcon {
+                    position: relative;
+                    align-items: center;
+                    display: flex;
+
+                    span {
+                        font-size: 14px;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background-color: tomato;
+                        color: white;
+                        position: absolute;
+                        right: -10px;
+                        top: -9px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .cartIcon:hover {
+                    color: cyan;
+                }
+            }
+        }
+    }
+}

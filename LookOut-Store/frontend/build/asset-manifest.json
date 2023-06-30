@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Lunar-spec/LookOut-Store.git/static/css/main.8e36ac02.css",
+    "main.js": "/Lunar-spec/LookOut-Store.git/static/js/main.68235ed7.js",
+    "index.html": "/Lunar-spec/LookOut-Store.git/index.html",
+    "main.8e36ac02.css.map": "/Lunar-spec/LookOut-Store.git/static/css/main.8e36ac02.css.map",
+    "main.68235ed7.js.map": "/Lunar-spec/LookOut-Store.git/static/js/main.68235ed7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e36ac02.css",
+    "static/js/main.68235ed7.js"
+  ]
+}

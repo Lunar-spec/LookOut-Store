@@ -1,0 +1,79 @@
+.register {
+    height: 100vh;
+    background:linear-gradient(#02409066 , #013f7d56), url('https://images.pexels.com/photos/10479168/pexels-photo-10479168.jpeg?auto=compress&cs=tinysrgb&w=1600') fixed center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card{
+        display: flex;
+        flex-direction: row;
+        background: linear-gradient( #2193b050, #6dd5ed46);
+        width: 50%;
+        border-radius: 5px;
+        min-height: 400px;
+        overflow: hidden;
+
+        .left{
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            h1{
+                color: #ffffff;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                input{
+                    border: none;
+                    background: transparent;
+                    border-bottom: 1px solid #fff;
+                    padding: 20px 10px;
+                    color: #fff;
+
+                    &::placeholder{
+                        color: #fff;
+                        opacity: 0.5;
+                    }
+                }
+                button{
+                    width: 50%;
+                    padding: 10px;
+                    border: none;
+                    background: #169abb;
+                    color: white;
+                    font-weight: 600;
+                    cursor: pointer;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .right{
+            flex: 1;
+            background: linear-gradient(#06beb554, #6dd5ed5a),url("https://images.pexels.com/photos/3775379/pexels-photo-3775379.jpeg?auto=compress&cs=tinysrgb&w=1600") center;
+            background-size: cover;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            justify-content: center;
+            gap: 20px;
+
+            h1{
+                font-size: 72px;
+                line-height: 100px;
+                font-weight: bolder;
+            }
+
+            span{
+                font-size: 14px;
+            }
+        }
+    }
+}
