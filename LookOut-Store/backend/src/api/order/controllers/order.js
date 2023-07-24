@@ -11,7 +11,7 @@ const { createCoreController } = require("@strapi/strapi").factories;
 app.use(express.json())
 app.use(
   cors({
-    origin: `http://localhost/3000`
+    origin: `https://lookout-store.netlify.app/`
   })
 )
 
