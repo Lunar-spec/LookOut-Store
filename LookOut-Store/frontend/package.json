@@ -58,6 +58,7 @@
     ]
   },
   "devDependencies": {
+    "depcheck": "^1.4.3",
     "gh-pages": "^5.0.0"
   }
 }
