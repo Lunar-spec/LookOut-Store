@@ -21,7 +21,7 @@
         };
 
         const handleLogin = async () => {
-            const url = `http://localhost:1337/api/auth/local`;
+            const url = `${process.env.REACT_APP_API_URL}/api/auth/local`;
             try {
                 if (user.identifier && user.password) {
                     const { data } = await axios.post(url, user);

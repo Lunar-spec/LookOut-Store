@@ -22,7 +22,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       
-      const url = `http://localhost:1337/api/newsletters`;
+      const url =`${process.env.REACT_APP_API_URL}/api/newsletters`;
       if (user) {
         // const res = true
         console.log(user)

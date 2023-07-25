@@ -20,7 +20,7 @@ const Register = () => {
 
   const singUp = async () => {
     try {
-      const url = `http://localhost:1337/api/auth/local/register`;
+      const url = `${process.env.REACT_APP_API_URL}/api/auth/local/register`;
       if (user.email && user.name && user.username && user.password) {
         const res = await axios.post(url, user);
         //console.log(res)
