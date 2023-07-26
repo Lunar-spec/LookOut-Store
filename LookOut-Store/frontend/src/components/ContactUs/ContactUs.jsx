@@ -54,7 +54,7 @@ function ContactUs() {
 
   const handleContact = async () => {
     try {
-      const url = `${process.env.REACT_APP_API_URL}/api/feedbacks`;
+      const url = `${process.env.REACT_APP_API_URL}feedbacks`;
       if (formData) {
         // console.log(formData.name)
         // console.log(formData.email)

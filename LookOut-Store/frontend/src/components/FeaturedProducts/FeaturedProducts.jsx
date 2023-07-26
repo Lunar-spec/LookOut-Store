@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import Card from '../Card/Card'
 import "./FeaturedProducts.scss"
 import useFetch from '../../hooks/useFetch'
@@ -8,6 +9,9 @@ import Loader from '../Loader/Loader';
 const FeaturedProducts = ({ type }) => {
     //console.log(type)
     const {data, loading, error} = useFetch(`/products?filters[type][$eq]=${type}&populate=*`)
+    const [products, setProducts] = useState([])
+    console.log(data)
+
   return (
     <div className='featuredproducts' data-aos="fade-up">
           <div className="top">

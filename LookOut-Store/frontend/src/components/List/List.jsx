@@ -3,6 +3,7 @@ import './List.scss'
 import Card from '../Card/Card'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../Loader/Loader'
+import ErrorIcon from '@mui/icons-material/Error';
 
 const List = ({ subCats, maxPrice, sort, catId }) => {
 
@@ -17,15 +18,25 @@ const List = ({ subCats, maxPrice, sort, catId }) => {
     ////console.log(subCats)
     return (
         <div className='list'>
-            {loading
-                ?
-                <div className="loading">
-                    <Loader />
-                </div>
-                :
-                (data?.map((item) =>
-                    <Card item={item} key={item.id} />
-                ))
+            {error ?
+                (
+                    <div className="error">
+                        <ErrorIcon className='icon' />Something went wrong!
+                    </div>
+                ) :
+                loading
+                    ?
+                    (
+                        <div className="loading">
+                            <Loader />
+                        </div>
+                    )
+                    :
+                    (
+                        data?.map((item) =>
+                            <Card item={item} key={item.id} />
+                        )
+                    )
             }
         </div>
     )

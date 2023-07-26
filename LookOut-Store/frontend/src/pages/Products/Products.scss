@@ -1,5 +1,5 @@
 .products {
-    padding: 20px 50px;
+    padding: 0px 40px;
     background: #232323;
     display: flex;
     color: #fff;
@@ -7,13 +7,14 @@
 
     .left{
         flex: 1;
-        position: sticky;
+        position:sticky;
         height: 100%;
-        top: 70px;
+        top: 60px;
+        
 
         .filterItem{
             margin-bottom: 30px;
-
+            width: 50%;
             h2{
                 font-weight: 400;
                 margin-bottom: 20px;
@@ -27,7 +28,6 @@
                     padding: 10px;
                     background-color: #343434;
                     border-radius: 10px;
-                    width: 50%;
                 }
             }
 
@@ -62,7 +62,7 @@
 
                 .rangeSl {
                     -webkit-appearance: none;
-                    width: 200px;
+                    width: 70%;
                     height: 2px;
                     background: lightgray;
                     outline: none;
@@ -90,10 +90,14 @@
                 }
             }
         }
+
+        .sort {
+            width: 100%;
+        }
+
         .sort:hover{
             background: #343434;
             padding: 10px;
-            width: 50%;
             border-radius: 10px;
             }
     }
@@ -105,6 +109,19 @@
             height: 300px;
             object-fit: cover;
             margin-bottom: 50px;
+        }
+
+        .error{
+            font-size: 24px;
+            align-items: center;
+            justify-content: center;
+            color: #E74C3C;
+            gap: 10px;
+            display: flex;
+            padding: 10px;
+        }
+        .icon{
+            font-size: 40px;
         }
     }
 }

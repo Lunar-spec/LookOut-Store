@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import "./Contact.scss";
+import { makeRequest } from '../../makeRequest';
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       
-      const url =`${process.env.REACT_APP_API_URL}/api/newsletters`;
+      const url =process.env.REACT_APP_API_URL + `newsletters`;
       if (user) {
         // const res = true
         console.log(user)
@@ -35,7 +36,6 @@ const Contact = () => {
         );
         //console.log(res)
         if (res) {
-          setUser({ email: '' });
           navigate("/");
           toast.success("Thank you for joining in...", {
             hideProgressBar: true,
@@ -44,6 +44,7 @@ const Contact = () => {
             hideProgressBar: "true",
             autoClose: 1500,
           });
+          setUser({ email: '' });
         }
       }
     } catch (error) {

@@ -16,6 +16,7 @@ const Card = ({ item }) => {
           <div className="prices">
             <h3>${item?.attributes.oldPrice || item?.attributes.price + 20}</h3>
             <h3>${item?.attributes.price}</h3>
+            {console.log(item?.attributes?.img2?.data?.attributes?.url)}
           </div>
         </div>
       </div>

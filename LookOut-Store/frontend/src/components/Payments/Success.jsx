@@ -10,11 +10,18 @@ const PaymentSuccessful = () => {
 
     const dispatch = useDispatch();
 
+    const timer = setTimeout(function() {window.location='/'}, 5000)
+
     //console.log(resId)
   return (
     resId ? 
         (<>
-        {document.addEventListener("Reset Cart",dispatch(resetCart()))}
+        { 
+          document.addEventListener("Reset Cart",dispatch(resetCart())
+          ,timer
+          )
+        }
+
         <div className="payment" data-aos='zoom-out'>
         <div className="payment__container">
         <i className="fas fa-check-circle payment__icon"></i>
@@ -22,7 +29,7 @@ const PaymentSuccessful = () => {
         <p className="payment__message">
         Thank you for your purchase. Your payment was successful.
         </p>
-        <Link to={"/"}><button className='home'>Home Page</button></Link>
+        <Link to={'/'}><button className='home'>Home Page</button></Link>
         </div>
         </div>
         </>)
@@ -36,7 +43,7 @@ const PaymentSuccessful = () => {
         <p className="payment__message">
         Your payment was not successful. Please try again later
         </p>
-        <Link to={"/"}><button className='home'>Home Page</button></Link>
+        <Link to={'/'}><button className='home'>Home Page</button></Link>
         </div>
         </div>
         </>

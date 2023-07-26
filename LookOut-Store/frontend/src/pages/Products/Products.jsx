@@ -5,7 +5,7 @@ import './Products.scss';
 import useFetch from '../../hooks/useFetch'
 
 
-const Products = () => {  
+const Products = () => {
 
   const catId = parseInt(useParams().id);
   //console.log(param)
@@ -30,6 +30,14 @@ const Products = () => {
         : selectedSubCats.filter((item) => item !== value)
     );
   };
+
+  useEffect(() => {
+    // console.log(selectedSubCats)
+    if (sort === 'desc' || selectedSubCats.length > 0 || maxPrice != '200') {
+      window.location.reload(true)
+    }
+  }, [data])
+
 
   const reset = () => {
     window.location.reload(true)
@@ -72,23 +80,21 @@ const Products = () => {
         </div>
         <div className="filterItem">
           <h2>Sort by:</h2>
-          <div className="inputItem sort">
+          <div className="inputItem sort" onChange={(e) => setSort("asc")}>
             <input
               type="radio"
               id='asc'
               value="asc"
               name='price'
-              onChange={(e) => setSort("asc")}
             />
             <label htmlFor="asc">Price (Lowest first)</label>
           </div>
-          <div className="inputItem sort">
+          <div className="inputItem sort" onChange={(e) => setSort("desc")}>
             <input
               type="radio"
               id='desc'
               value="desc"
               name='price'
-              onChange={(e) => setSort("desc")}
             />
             <label htmlFor="desc">Price (Highest first)</label>
           </div>
@@ -98,10 +104,23 @@ const Products = () => {
         </div>
       </div>
       <div className="right">
-        <img
-          className='catImg'
-          src="https://images.pexels.com/photos/9771526/pexels-photo-9771526.jpeg?auto=compress&cs=tinysrgb&w=1600" alt=""
-        />
+        {
+          catId === 1 ?
+            <img
+              className='catImg'
+              src="https://images.pexels.com/photos/4672434/pexels-photo-4672434.jpeg?auto=compress&cs=tinysrgb&w=1600" alt=""
+            /> :
+            catId === 2 ?
+              <img
+                className='catImg'
+                src="https://images.pexels.com/photos/4553618/pexels-photo-4553618.jpeg?auto=compress&cs=tinysrgb&w=1600" alt=""
+              />
+              :
+              <img
+                className='catImg'
+                src="https://images.pexels.com/photos/1001914/pexels-photo-1001914.jpeg?auto=compress&cs=tinysrgb&w=1600" alt=""
+              />
+        }
         <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats} />
       </div>
     </div>
